@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useReducer } from "react";
 
-const BASE_URL = "http://localhost:4000";
+const BASE_URL = "data/coffee.json";
 
 const CoffeeContext = createContext();
 
@@ -52,27 +52,19 @@ function CoffeeProvider({ children }) {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   useEffect(() => {
-    async function fetchBlog() {
+    async function fetchData() {
       dispatch({ type: "loading" });
       try {
-        const responses = await Promise.all([
-          fetch(`${BASE_URL}/menus`),
-          fetch(`${BASE_URL}/blog`),
-          fetch(`${BASE_URL}/categories`),
-          fetch(`${BASE_URL}/team`),
-        ]);
+        const res = await fetch(BASE_URL); // فقط یک fetch برای کل فایل JSON
+        if (!res.ok) throw new Error("Failed to fetch data");
 
-        responses.forEach((res, i) => {
-          if (!res.ok) throw new Error(`Failed to fetch request ${i + 1}`);
-        });
+        const data = await res.json();
+        const { menus, blog, categories, team } = data;
 
-        const [menuData, blogData, categoriesData, teamData] =
-          await Promise.all(responses.map((res) => res.json()));
-
-        dispatch({ type: "coffMenu/loaded", payload: menuData });
-        dispatch({ type: "blog/loaded", payload: blogData });
-        dispatch({ type: "categories/loaded", payload: categoriesData });
-        dispatch({ type: "teams/loaded", payload: teamData });
+        dispatch({ type: "coffMenu/loaded", payload: menus });
+        dispatch({ type: "blog/loaded", payload: blog });
+        dispatch({ type: "categories/loaded", payload: categories });
+        dispatch({ type: "teams/loaded", payload: team });
       } catch {
         dispatch({
           type: "rejected",
@@ -80,7 +72,8 @@ function CoffeeProvider({ children }) {
         });
       }
     }
-    fetchBlog();
+
+    fetchData();
   }, []);
 
   function handleReadMore() {
