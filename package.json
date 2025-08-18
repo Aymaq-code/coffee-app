@@ -3,12 +3,15 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://aymaq-code.github.io/coffee-app/",
   "scripts": {
     "server": "json-server --watch public/data/coffee.json --port 4000",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@lottiefiles/react-lottie-player": "^3.6.0",
