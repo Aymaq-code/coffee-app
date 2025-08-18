@@ -1,0 +1,126 @@
+.home {
+  background-image: linear-gradient(
+    200deg,
+    $coffee-bg3 5%,
+    $coffee-bg2 100%,
+    $coffee-bg3 100%
+  );
+  height: 100vh;
+  overflow: hidden;
+  &__content {
+    margin: 9rem auto !important;
+    max-width: 1450px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(441px, 1fr));
+    gap: 0 20px;
+    position: relative;
+    z-index: -1;
+  }
+
+  &__text {
+    padding: 0 2rem;
+  }
+
+  &__title {
+    line-height: 9rem;
+    margin-bottom: 4rem;
+    animation: slideInLeft 1s cubic-bezier(0, 0.17, 0, 0.93);
+
+    &-span {
+      text-transform: capitalize;
+      letter-spacing: 7px;
+      font-size: 6rem;
+      opacity: 60%;
+      margin-left: 4rem;
+    }
+  }
+
+  &__description {
+    margin-bottom: 5rem;
+    color: $coffee-fontColor-3;
+    animation: slideInLeft 2s cubic-bezier(0.09, 0.14, 0, 0.93) 0.5s backwards;
+  }
+
+  &__button {
+    animation: fadeInUp 1s cubic-bezier(0.04, 0.51, 0.66, 0.14) 0.8s backwards;
+  }
+
+  &__image {
+    width: 75%;
+
+    justify-self: right;
+    background-image: url("/public/assets/coffeeHome.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: slideInRight 2.5s cubic-bezier(0.29, 1.27, 0.47, 1.14) 0.9s
+      backwards;
+  }
+}
+
+//RESPONSIVE SOURCE CODES
+
+@include respond(big-desktop) {
+  .home {
+    &__content {
+      max-width: 1800px;
+      padding: 8rem 1rem;
+    }
+  }
+}
+
+@include respond(medium-desktop) {
+  .home {
+    &__content {
+      margin: 20rem auto;
+      padding: 8rem 1rem;
+    }
+  }
+}
+
+@include respond(tab-landBig) {
+  .home {
+    &__content {
+      max-width: 1300px;
+      margin: 20rem auto;
+      padding: 8rem 1rem;
+    }
+  }
+}
+@include respond(tab-land) {
+  .home {
+    &__content {
+      margin: 25rem auto;
+      grid-template-columns: repeat(auto-fit, minmax(395px, 1fr));
+      gap: 0 50px;
+    }
+
+    &__text {
+      padding: 4rem 0;
+    }
+
+    &__image {
+      width: 100%;
+      height: 50rem;
+      justify-self: center;
+    }
+  }
+}
+
+@include respond(tab-port) {
+  .home {
+    padding: 0 !important;
+    height: auto;
+    &__content {
+      margin: 10rem auto;
+
+      display: flex;
+      flex-direction: column;
+      gap: 100px 0;
+    }
+
+    &__image {
+      align-self: center;
+    }
+  }
+}

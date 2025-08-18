@@ -1,0 +1,181 @@
+.btn {
+  border: none;
+  outline: none;
+  font-family: "Quicksand", sans-serif;
+  color: $coffee-fontColor;
+  font-size: 1.8rem;
+
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  box-shadow: $btnShadow;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $coffee-bg3;
+    transform: translateY(4px);
+    color: $coffee-fontColor-4;
+    box-shadow: 0px 2px 0px 0px $coffee-fontColor-5;
+  }
+}
+
+.primary {
+  background-color: $coffee-bg;
+  color: $coffee-fontColor;
+  font-weight: 300;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  padding: 1.2rem 2rem 1rem 2rem;
+  border-radius: 4px;
+  opacity: 90%;
+}
+
+.secondary {
+  padding: 1.3rem 2.5rem;
+  border-radius: 100px;
+  background-color: $coffee-bg3;
+  color: $coffee-fontColor;
+  font-weight: bolder;
+}
+
+// Join btn
+.join {
+  border-radius: 4px 0 0 4px;
+  padding: 1.5rem 3rem;
+  background-color: $coffee-bg;
+  box-shadow: none;
+
+  &:hover {
+    transform: none;
+    background-color: $coffee-bg;
+    color: $coffee-fontColor;
+  }
+}
+
+// ORDER BUTTON
+.orderBtn {
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  box-shadow: none;
+  background-color: transparent;
+  position: absolute;
+  left: 310px;
+  bottom: 15px;
+  animation: swinging 2s linear infinite alternate;
+
+  & img {
+    width: 100%;
+    height: 100%;
+  }
+  &:hover {
+    background-color: transparent;
+    box-shadow: none;
+    animation-play-state: paused;
+  }
+}
+
+// MENUT BTN
+.toggle_btn {
+  display: none;
+  cursor: pointer;
+}
+.menu_btn {
+  width: 40px;
+  height: 4px;
+  background-color: #fff;
+  position: relative;
+  display: block;
+  transition: background 0.3s ease;
+}
+
+.menu_btn::before,
+.menu_btn::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 4px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.menu_btn::before {
+  transform: translateY(-12px);
+}
+
+.menu_btn::after {
+  transform: translateY(12px);
+}
+
+.open {
+  background-color: transparent;
+}
+
+.open::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.open::after {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+// RESPONSIVE SOURCE
+
+@include respond(tab-port) {
+  .toggle_btn {
+    display: block;
+    position: absolute;
+    right: 25px;
+    top: 45px;
+  }
+}
+
+@include respond(tab-port) {
+  .primary {
+    font-size: 2.5rem;
+    padding: 1.2rem 12.24rem;
+  }
+}
+
+@include respond(phone) {
+  .toggle_btn {
+    right: 20px;
+    top: 35px;
+  }
+}
+
+@include respond(smallPhone) {
+  .secondary {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    margin-top: 3rem;
+  }
+
+  .menu_btn {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    position: relative;
+    display: block;
+    transition: background 0.3s ease;
+  }
+  .menu_btn::before,
+  .menu_btn::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+  }
+
+  .menu_btn::before {
+    transform: translateY(-9px);
+  }
+
+  .menu_btn::after {
+    transform: translateY(9px);
+  }
+}

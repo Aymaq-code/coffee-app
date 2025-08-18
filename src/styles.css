@@ -1,0 +1,205 @@
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  background-color: #eee;
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  80% {
+    transform: translateX(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+.btn {
+  border: none;
+  outline: none;
+  padding: 1.3rem 2.5rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.9rem;
+  font-weight: 700;
+  border-radius: 100px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.primary {
+  color: #3b2f2f;
+  background-color: #a0522d;
+  box-shadow: 1px 1px 4px 1px #796d6d;
+}
+
+.primary:hover {
+  background-color: #3b2f2f;
+  transform: translateY(2px);
+  color: #a0522d;
+  box-shadow: 1px 1px 2px 1px #3b2f2f;
+}
+
+.secondary {
+  font-family: poppins;
+  letter-spacing: 4px;
+  font-weight: bold;
+  font-size: 1.9rem;
+  text-transform: uppercase;
+  background-color: #a1887f;
+  color: #eeeeee;
+  opacity: 50%;
+  box-shadow: 0px 2px 2.8px 0px #3b2f2f;
+}
+
+.secondary:hover {
+  background-color: #3b2f2f;
+  transform: translateY(4px);
+  color: #a0522d;
+  box-shadow: 0px 2px 5px 1px #3b2f2f;
+}
+
+.logo {
+  height: 6rem;
+  width: 8rem;
+  cursor: pointer;
+}
+.logo img {
+  height: 100%;
+  width: 100%;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 3rem;
+}
+.navigation ul {
+  list-style: none;
+  display: flex;
+  gap: 0 2rem;
+}
+.navigation ul li {
+  align-content: center;
+  padding: 0 4rem;
+  position: relative;
+  z-index: 1;
+}
+.navigation ul li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  background-color: #a0522d;
+  width: 0%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-image: linear-gradient(220deg, transparent 50%, transparent 50%, #3b2f2f 100%);
+  background-size: -50%;
+  transition: all 0.4s ease;
+}
+.navigation ul li:hover::after {
+  width: 100%;
+  background-size: 100%;
+}
+.navigation ul li a {
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #3b2f2f;
+  transition: all 0.3s ease;
+  font-family: "Quicksand", sans-serif;
+  position: relative;
+  z-index: 999;
+}
+.navigation ul li a:hover {
+  color: #3b2f2f;
+}
+
+.active {
+  color: #a0522d !important;
+  border-bottom: 2px solid #3b2f2f;
+}
+
+.home {
+  height: 100vh;
+  background-image: linear-gradient(185deg, #eecfb4, #85593c);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+.home_cnt {
+  margin: 8rem auto;
+  max-width: 1450px;
+  height: 65%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0 20px;
+}
+.home_cnt-left {
+  padding: 0 2rem;
+  align-content: center;
+  animation: moveInLeft 3s 1;
+  margin-top: 6rem;
+}
+.home_cnt-left h1 {
+  font-family: popin;
+  font-size: 8rem;
+  letter-spacing: 3px;
+  color: #3b2f2f;
+  text-transform: uppercase;
+  line-height: 8.5rem;
+  margin-bottom: 4rem;
+}
+.home_cnt-left p {
+  font-family: popins;
+  letter-spacing: 2px;
+  font-size: 1.8rem;
+  line-height: 2.7rem;
+  margin-bottom: 5rem;
+  color: #000;
+  opacity: 65%;
+}
+.home_cnt-right {
+  background-image: url("/assets/coffeeHome.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 5rem;
+}
+
+/*# sourceMappingURL=styles.css.map */

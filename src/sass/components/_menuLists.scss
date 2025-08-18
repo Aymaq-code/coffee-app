@@ -1,0 +1,144 @@
+.menu_coffeeLists {
+  margin: 4rem auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(283px, 1fr));
+  gap: 10px;
+
+  &-card {
+    position: relative;
+    height: 38rem;
+    border: 0.1px solid $coffee-bg2;
+    padding: 1rem 2rem;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 0px;
+      top: 0;
+      width: 150px;
+      height: 150px;
+      clip-path: circle(50% at 0 0);
+      transform: rotate(90deg);
+      background: $coffee-bg3;
+    }
+
+    .coffeeName {
+      text-align: center;
+      text-transform: capitalize;
+    }
+    .original {
+      font-size: 1.5rem;
+      margin-top: 0.7rem;
+    }
+    // .bestTime {
+    //   font-size: 1.3rem;
+    //   margin-top: 0.5rem;
+    //   letter-spacing: 2px;
+    // }
+    .description {
+      font-size: 1.3rem;
+      letter-spacing: 1px;
+      margin-top: 1rem;
+    }
+    .coffeeImg {
+      height: 10rem;
+      margin-top: 6rem;
+    }
+    .discounted {
+      position: absolute;
+      top: 150px;
+      right: 20px;
+
+      background-color: $coffee-bg3;
+      opacity: 80%;
+      font-size: 2.1rem;
+      font-weight: 700;
+      width: 9.3rem;
+      height: 8.8rem;
+      padding: 1.7rem 2.5rem;
+      line-height: 28px;
+      border-radius: 49% 51% 17% 44% / 17% 38% 32% 44%;
+    }
+    .price {
+      position: absolute;
+      left: 20px;
+      bottom: 10px;
+    }
+  }
+}
+
+// RESPONSIVE SROUCE CODE
+
+@include respond(tab-land) {
+  .menu_coffeeLists {
+    padding: 0 0.5rem;
+
+    grid-template-columns: repeat(auto-fit, minmax(277px, 1fr));
+
+    &-card {
+      position: relative;
+      height: 38rem;
+      border: 0.1px solid $coffee-bg2;
+      padding: 1rem 2rem;
+      overflow: hidden;
+
+      &::before {
+        content: "";
+        position: absolute;
+        right: -70px;
+        top: -70px;
+        width: 150px;
+        height: 150px;
+        clip-path: circle(50% at 50% 50%);
+        background: $coffee-bg3;
+      }
+
+      .coffeeName {
+        text-align: center;
+        letter-spacing: 4px;
+      }
+      .original {
+        font-size: 1.5rem;
+        margin-top: 0.7rem;
+        letter-spacing: 2px;
+      }
+      // .bestTime {
+      //   font-size: 1.3rem;
+      //   margin-top: 0.5rem;
+      //   letter-spacing: 2px;
+      // }
+      .description {
+        font-size: 1.3rem;
+        letter-spacing: 1px;
+        margin-top: 0.5rem;
+      }
+      .coffeeImg {
+        height: 12rem;
+        margin-top: 4rem;
+      }
+      .discounted {
+        position: absolute;
+        top: 150px;
+        right: 20px;
+        color: $coffee-fontColor;
+        background-color: $coffee-bg3;
+        opacity: 80%;
+        font-size: 2.1rem;
+        font-weight: 700;
+        width: 9.3rem;
+        height: 8.8rem;
+        padding: 1.7rem 2.5rem;
+        line-height: 28px;
+        border-radius: 49% 51% 17% 44% / 17% 38% 32% 44%;
+      }
+      .price {
+        position: absolute;
+        left: 20px;
+        bottom: 10px;
+        color: $coffee-fontColor-1;
+      }
+    }
+  }
+}

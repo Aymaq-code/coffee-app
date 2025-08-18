@@ -1,0 +1,176 @@
+.aboutPagePart1 {
+  position: relative;
+  top: 0;
+  z-index: -1;
+  padding: 1rem 0;
+  background-image: linear-gradient(
+      to bottom,
+      rgba($coffee-bg, 0.2),
+      rgba($coffee-bg1, 0.9),
+      rgba($coffee-bg3, 0.7)
+    ),
+    url("/public/assets/bar-img.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &__contents {
+    margin: 12.3rem auto;
+    max-width: 1400px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
+    gap: 0 60px;
+
+    &-left {
+      padding: 2rem;
+      overflow: hidden;
+
+      & h2 {
+        animation: slideInLeft 1.5s cubic-bezier(0.05, 0.72, 0.25, 1.01) 1s
+          backwards;
+      }
+
+      & p {
+        animation: slideInLeft 2s cubic-bezier(0.05, 0.72, 0.25, 1.01) 1.3s
+          backwards;
+        margin-top: 1.3rem;
+      }
+    }
+    &-right {
+      position: relative;
+      height: auto;
+      width: 80%;
+      align-self: center;
+      justify-self: right;
+      border-radius: 4rem;
+      overflow-y: hidden;
+      animation: slideInRight 2s cubic-bezier(0.05, 0.72, 0.25, 1.01) 1.7s
+        backwards;
+
+      & video {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      & span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 6rem;
+        cursor: pointer;
+        color: $coffee-fontColor-4;
+        z-index: 1;
+      }
+    }
+  }
+}
+
+// RESPONSIVE SOURCE CODES
+
+@include respond(big-desktop) {
+  .aboutPagePart1 {
+    &__contents {
+      max-width: 1800px;
+    }
+  }
+}
+
+@include respond(tab-land) {
+  .aboutPagePart1 {
+    &__contents {
+      gap: 10px 0px;
+      max-width: 1000px;
+    }
+  }
+}
+@include respond(tab-port) {
+  .aboutPagePart1 {
+    padding: 4rem 0;
+    &__contents {
+      margin: 25rem auto 4rem auto;
+      gap: 100px 10px;
+      width: 100%;
+
+      &-left {
+        & h2 {
+          font-size: 6rem;
+        }
+
+        & p {
+          font-size: 2rem;
+          line-height: 3.3rem;
+        }
+      }
+
+      &-right {
+        text-align: center;
+        justify-self: center;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@include respond(phone) {
+  .aboutPagePart1 {
+    padding: 4rem 0;
+    &__contents {
+      margin: 20rem 0 0 0rem;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 100px 0;
+
+      &-left {
+        padding: 0;
+        width: 100%;
+
+        & h2 {
+          line-height: 6rem;
+          letter-spacing: 1rem;
+        }
+
+        & p {
+          margin-top: 4rem;
+        }
+      }
+    }
+  }
+}
+
+@include respond(smallPhone) {
+  .aboutPagePart1 {
+    padding: 5rem 0;
+    &__contents {
+      margin: 10rem 0 0 0rem;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 40px 0;
+
+      &-left {
+        padding: 0;
+        width: 100%;
+
+        & h2 {
+          line-height: 6rem;
+        }
+
+        & p {
+          margin-top: 3rem;
+        }
+      }
+      &-right {
+        width: 100%;
+        height: 25rem;
+        border-radius: 2rem;
+        padding: 0;
+      }
+    }
+  }
+}

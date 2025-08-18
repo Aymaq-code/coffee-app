@@ -1,0 +1,345 @@
+.contactPage {
+  background-image: linear-gradient(180deg, $coffee-bg3 0%, $coffee-bg4 100%);
+  //height: 100vh;
+
+  &__contents {
+    //border: 2px solid blue;
+    position: relative;
+    z-index: -1;
+    margin: 12rem auto;
+    max-width: 1400px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px 36px;
+
+    &-form {
+      //border: 2px solid black;
+      width: 48%;
+
+      // .head,
+      // .form {
+      //   border: 2px solid gray;
+      // }
+
+      .head {
+        h3 {
+          font-family: "Monoton", cursive;
+          font-size: 2.8rem;
+          text-transform: uppercase;
+        }
+
+        h2 {
+          font-size: 4.5rem;
+          letter-spacing: 4px;
+          line-height: 6rem;
+          text-transform: capitalize;
+          margin: 1rem 0 3.5rem 0;
+        }
+
+        p {
+          letter-spacing: 2px;
+          text-transform: none;
+        }
+      }
+      .form {
+        margin-top: 10rem;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 30px 10px;
+
+        input {
+          all: unset;
+          width: 40%;
+          background-color: $coffee-bg4;
+          font-size: 1.5rem;
+          color: $coffee-fontColor-3;
+          border-radius: 30px;
+          padding: 1.5rem 3rem;
+        }
+
+        textarea {
+          width: 100%;
+          height: 25rem;
+          border: none;
+          outline: none;
+          border-radius: 10px;
+          background-color: $coffee-bg4;
+          padding: 2rem;
+        }
+      }
+      button {
+        font-size: 1.6rem;
+        letter-spacing: 2px;
+        text-transform: capitalize;
+        padding: 1.7rem 2rem;
+        float: right;
+        margin-top: 4rem;
+      }
+    }
+
+    &-map {
+      position: relative;
+      width: 48%;
+      border-radius: 50px;
+      overflow: hidden;
+      box-shadow: 0 0.2rem 2rem rgba($coffee-bg3, 0.4);
+
+      &::after {
+        content: "";
+        position: absolute;
+
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($coffee-bg3, 0.5);
+        pointer-events: none;
+      }
+
+      iframe {
+        display: block;
+        border: none;
+        outline: none;
+      }
+    }
+
+    &-details {
+      //border: 1px solid orangered;
+      //padding: 2rem;
+      margin-top: 10rem;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0 40px;
+
+      .card {
+        width: 440px;
+        border-radius: 30px;
+        opacity: 0;
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 50px);
+
+        justify-content: center;
+        align-items: center;
+        gap: 0 15px;
+
+        padding: 4rem 0;
+        transition: all 0.7s ease;
+
+        &:hover {
+          background-color: $coffee-bg4;
+        }
+        h3,
+        p {
+          color: $coffee-fontColor-5;
+          flex: 1;
+          letter-spacing: 1px;
+        }
+
+        h3 {
+          grid-column: 2 / 4;
+          grid-row: 1 / 3;
+          font-size: 2rem;
+        }
+        p {
+          grid-column: 2 / 4;
+          grid-row: 2 / 4;
+          line-height: 1.8rem;
+        }
+
+        svg {
+          grid-row: 2 / 3;
+          width: 70px;
+          height: 70px;
+          padding: 1.2rem;
+          fill: $coffee-fontColor-5;
+          background-color: $coffee-bg3;
+          border-radius: 50%;
+          justify-self: center;
+          align-self: center;
+        }
+      }
+      .card-1.animate {
+        animation: slideInLeft 0.4s ease 1.5s forwards;
+      }
+      .card-2.animate {
+        animation: slideInLeft 0.4s ease 1.7s forwards;
+      }
+      .card-3.animate {
+        animation: slideInLeft 0.4s ease 1.9s forwards;
+      }
+    }
+
+    &-slide {
+      margin: 10rem auto;
+      padding: 2rem;
+      border-radius: 45px;
+      aspect-ratio: 20 / 9;
+      align-content: center;
+      justify-items: center;
+      background: linear-gradient(
+          rgba($coffee-bg3, 0.4),
+          rgba($coffee-bg3, 0.7)
+        ),
+        url("/assets/contact-img.jpg") no-repeat center/cover;
+      .contents {
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 72%;
+
+        h1 {
+          line-height: 7rem;
+          letter-spacing: 4px;
+          font-size: 6rem;
+          color: $coffee-fontColor;
+          text-transform: capitalize;
+          text-align: center;
+          opacity: 0;
+        }
+        h3 {
+          color: $coffee-fontColor;
+          font-size: 4rem;
+          opacity: 0;
+        }
+        &__input {
+          //border: 2px solid blue;
+          margin-top: 4rem;
+          background-color: $coffee-bg5;
+          padding: 1rem 1rem 1rem 4rem;
+          border-radius: 100px;
+          overflow: hidden;
+          display: flex;
+          justify-content: space-between;
+          width: 60%;
+          opacity: 0;
+
+          input {
+            font-size: 1.4rem;
+            color: $coffee-fontColor-3 !important;
+            all: unset;
+            width: 98%;
+          }
+
+          button {
+            padding: 1.5rem 5rem;
+            box-shadow: none;
+            &:hover {
+              transform: none;
+            }
+          }
+        }
+      }
+      .contents h3.animate {
+        animation: fadeInDown 0.8s ease 2s forwards;
+      }
+
+      .contents h1.animate {
+        animation: fadeInDown 1.5s ease 2.5s forwards;
+      }
+
+      .contents__input.animate {
+        animation: fadeInUp 1s ease 2.8s forwards;
+      }
+    }
+  }
+}
+
+// RESPONSIVE SOURCE
+
+@include respond(tab-port) {
+  .contactPage {
+    padding: 2rem;
+    &__contents {
+      &-form {
+        width: 100%;
+        padding: 2rem;
+
+        h2 {
+          padding: 0 27rem 0 0;
+        }
+      }
+
+      &-map {
+        width: 100%;
+      }
+
+      &-details {
+        gap: 40px 0;
+
+        .card {
+          margin: 0 auto;
+          width: 95%;
+        }
+      }
+
+      &-slide {
+        aspect-ratio: 15 / 9;
+
+        .contents {
+          width: 100%;
+
+          h1 {
+            line-height: 8rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include respond(phone) {
+  .contactPage {
+    padding: 1rem;
+    &__contents {
+      &-form {
+        h2 {
+          padding: 0;
+        }
+      }
+
+      &-map {
+      }
+
+      &-slide {
+        aspect-ratio: 7 / 9;
+        padding: 0;
+
+        .contents {
+          width: 100%;
+
+          h1 {
+            line-height: 7rem;
+          }
+          &__input {
+            margin-top: 6rem;
+            border-radius: 0;
+            background-color: transparent;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px 0;
+
+            input {
+              background-color: $coffee-bg5;
+              border-radius: 50px;
+              padding: 2.5rem 4rem;
+              width: 50%;
+            }
+            button {
+              padding: 1.8rem 10rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

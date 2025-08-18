@@ -1,0 +1,69 @@
+// typography
+body {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.6rem;
+  color: $coffee-fontColor-2;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: uppercase;
+  letter-spacing: 10px;
+}
+
+h1 {
+  font-family: "Monoton", cursive;
+  font-size: 7rem;
+  font-weight: 700;
+  color: $coffee-fontColor-5;
+}
+
+h2 {
+  font-family: "Lora", serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: $coffee-fontColor;
+}
+h3,
+h4,
+p {
+  font-family: "Quicksand", sans-serif;
+  color: $coffee-fontColor-2;
+  letter-spacing: 3px;
+  text-transform: capitalize;
+}
+h3 {
+  font-size: 2.3rem;
+}
+
+p {
+  font-size: 1.4rem;
+  line-height: 2.5rem;
+}
+
+a {
+  font-family: "Montserrat", sans-serif !important;
+  color: $coffee-fontColor-2;
+  text-decoration: none;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: $coffee-fontColor-4;
+  }
+}
+
+li {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+  transition: all 0.3s ease;
+  &:hover {
+    color: $coffee-fontColor !important;
+  }
+}

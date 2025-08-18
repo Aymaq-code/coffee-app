@@ -1,0 +1,30 @@
+.recentPosts {
+  //border: 2px solid red;
+  justify-self: right;
+  width: 80%;
+  border-radius: 30px;
+  padding: 2rem;
+  box-shadow: $btnShadow;
+
+  h3 {
+    color: $coffee-fontColor-4;
+  }
+
+  &__contents {
+    margin-top: 2rem;
+    .post {
+      border-bottom: 1px solid $coffee-fontColor-4;
+      padding: 2rem 0;
+
+      a {
+        font-size: 1.7rem;
+      }
+    }
+  }
+}
+
+@include respond(tab-land) {
+  .recentPosts {
+    width: 100%;
+  }
+}
