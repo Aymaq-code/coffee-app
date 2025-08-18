@@ -1,4 +1,4 @@
-import { HashRouter, Navigate, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { CoffeeProvider } from "./contexts/CoffeeContext";
 
 import Home from "./pages/HomePage";
@@ -14,7 +14,7 @@ import BlogPageDynamic from "./components/BlogPageDynamic ";
 function App() {
   return (
     <CoffeeProvider>
-      <HashRouter>
+      <BrowserRouter>
         <Routes>
           <Route index element={<Home />} />
           <Route path="/menu" element={<Menu />} />
@@ -30,7 +30,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
-      </HashRouter>
+      </BrowserRouter>
     </CoffeeProvider>
   );
 }
