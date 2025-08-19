@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useReducer } from "react";
 
-const BASE_URL = "data/coffee.json";
+const BASE_URL = "http://localhost:4000";
 
 const CoffeeContext = createContext();
 
@@ -54,12 +54,25 @@ function CoffeeProvider({ children }) {
   useEffect(() => {
     async function fetchData() {
       dispatch({ type: "loading" });
-      try {
-        const res = await fetch(BASE_URL); // فقط یک fetch برای کل فایل JSON
-        if (!res.ok) throw new Error("Failed to fetch data");
 
-        const data = await res.json();
-        const { menus, blog, categories, team } = data;
+      try {
+        const [menusRes, blogRes, categoriesRes, teamRes] = await Promise.all([
+          fetch(`${BASE_URL}/menus`),
+          fetch(`${BASE_URL}/blog`),
+          fetch(`${BASE_URL}/categories`),
+          fetch(`${BASE_URL}/team`),
+        ]);
+
+        if (!menusRes.ok || !blogRes.ok || !categoriesRes.ok || !teamRes.ok) {
+          throw new Error("Failed to fetch data");
+        }
+
+        const [menus, blog, categories, team] = await Promise.all([
+          menusRes.json(),
+          blogRes.json(),
+          categoriesRes.json(),
+          teamRes.json(),
+        ]);
 
         dispatch({ type: "coffMenu/loaded", payload: menus });
         dispatch({ type: "blog/loaded", payload: blog });

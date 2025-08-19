@@ -29,17 +29,17 @@ export default function AboutPagePart2() {
   return (
     <div className="aboutPagePart2" ref={sectionRef}>
       <img
-        src="/public/assets/AboutPage-images/img1.png"
+        src="/assets/AboutPage-images/img1.png"
         alt="img-1"
         className="aboutPagePart2__img-1"
       />
       <img
-        src="/public/assets/AboutPage-images/img2.png"
+        src="/assets/AboutPage-images/img2.png"
         alt="img-2"
         className="aboutPagePart2__img-2"
       />
       <img
-        src="/public/assets/AboutPage-images/img4.png"
+        src="/assets/AboutPage-images/img4.png"
         alt="img-4"
         className="aboutPagePart2__img-4"
       />
@@ -60,7 +60,7 @@ export default function AboutPagePart2() {
             apart of something new.
           </p>
           <h3>Certificate & Awards</h3>
-          <img src="/public/assets/foodOrgsImgs.png" alt="foodOrgsImgs" />
+          <img src="/assets/foodOrgsImgs.png" alt="foodOrgsImgs" />
         </div>
         <div className="aboutPagePart2__contents-right">
           <div className="img-wrapper">

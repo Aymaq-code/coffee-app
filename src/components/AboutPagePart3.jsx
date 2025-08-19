@@ -29,18 +29,18 @@ export default function AboutSection3() {
   return (
     <div className="aboutPagePart3">
       <img
-        src="/public/assets/AboutPage-images/img7.png"
+        src="/assets/AboutPage-images/img7.png"
         alt="img7"
         className="aboutPagePart3__img-7"
       />
 
       <img
-        src="/public/assets/AboutPage-images/img14.png"
+        src="/assets/AboutPage-images/img14.png"
         alt="img7"
         className="aboutPagePart3__img-14"
       />
       <img
-        src="/public/assets/AboutPage-images/img14.png"
+        src="/assets/AboutPage-images/img14.png"
         alt="img7"
         className="aboutPagePart3__img-15"
       />

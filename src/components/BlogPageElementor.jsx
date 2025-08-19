@@ -22,23 +22,23 @@ export default function BlogPageElementor() {
         </div>
         <div className="blogPageEltr__contents-images">
           <img
-            src="/public/assets/blogPage-images/img5.png"
+            src="/assets/blogPage-images/img5.png"
             className="img1"
             alt="img1"
           />
           <img
-            src="/public/assets/blogPage-images/img6.png"
+            src="/assets/blogPage-images/img6.png"
             className="img2"
             alt="img2"
           />
           <img
-            src="/public/assets/blogPage-images/img7.png"
+            src="/assets/blogPage-images/img7.png"
             className="img3"
             alt="img3"
           />
 
           <img
-            src="/public/assets/blogPage-images/img8.png"
+            src="/assets/blogPage-images/img8.png"
             className="img4"
             alt="img4"
           />

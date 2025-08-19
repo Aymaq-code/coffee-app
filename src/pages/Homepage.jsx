@@ -1,5 +1,4 @@
 import Button from "../components/Button";
-import HomeMegaMenu from "../components/MenuMegaMenu";
 import Navigation from "../components/Navigation";
 
 export default function Home() {

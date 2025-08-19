@@ -42,7 +42,7 @@ export default function AboutPagePart4() {
   return (
     <div className="aboutPagePart4">
       <img
-        src="/public/assets/AboutPage-images/img13.png"
+        src="/assets/AboutPage-images/img13.png"
         alt="img7"
         className="aboutPagePart4__img-13"
       />

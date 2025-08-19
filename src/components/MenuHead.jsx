@@ -17,10 +17,10 @@ export default function MenuHead() {
 
         <footer className="footer">
           <div className="footer_left">
-            <img src="/public/assets/email.svg" alt="email-svg" />
-            <img src="/public/assets/linkedin.svg" alt="linkedin-svg" />
-            <img src="/public/assets/github.svg" alt="github-svg" />
-            <img src="/public/assets/whatsapp.svg" alt="whatsapp-svg" />
+            <img src="/assets/email.svg" alt="email-svg" />
+            <img src="/assets/linkedin.svg" alt="linkedin-svg" />
+            <img src="/assets/github.svg" alt="github-svg" />
+            <img src="/assets/whatsapp.svg" alt="whatsapp-svg" />
           </div>
           <div className="footer_right">
             <Button type={"join"}>join</Button>
