@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://aymaq-code.github.io/coffee-app/",
+  "homepage": "https://aymaq-code.github.io/kabul-coffee/",
   "scripts": {
     "server": "json-server --watch public/data/coffee.json --port 4000",
     "dev": "vite",
