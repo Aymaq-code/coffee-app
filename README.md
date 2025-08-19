@@ -19,4 +19,4 @@ npm run dev   # For Vite projects
 npm start     # For Create React App
 ```
 
-## 🌐 Live Demo
+## 🌐 Live Demo [https://aymaq-code.github.io/coffee-app/#/]
