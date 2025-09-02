@@ -1,0 +1,182 @@
+{
+  "menus": [
+    {
+      "id": 1,
+      "coffeeName": "Espresso",
+      "description": "A rich, concentrated shot of coffee with a strong flavor.",
+      "origin": "Italy",
+      "bestTime": "Morning energy boost",
+      "image": "https://i.ibb.co/yFQd6Xpk/Espresso.png",
+      "discount": 30,
+      "price": 2
+    },
+    {
+      "id": 2,
+      "coffeeName": "Americano",
+      "description": "Espresso diluted with hot water, smoother and milder in taste.",
+      "origin": "Italy (WWII American soldiers)",
+      "bestTime": "Mid-morning or afternoon",
+      "image": "https://i.ibb.co/dw6hRGPQ/americano-Photoroom.png",
+      "discount": 15,
+      "price": 1
+    },
+    {
+      "id": 3,
+      "coffeeName": "Latte",
+      "description": "Espresso mixed with steamed milk and topped with light foam.",
+      "origin": "Italy",
+      "bestTime": "Late morning",
+      "image": "https://i.ibb.co/My7BHf59/Latte-Photoroom.png",
+      "discount": 25,
+      "price": 1.5
+    },
+    {
+      "id": 4,
+      "coffeeName": "Cappuccino",
+      "description": "Equal parts espresso, steamed milk, and milk foam.",
+      "origin": "Italy",
+      "bestTime": "Breakfast or mid-morning",
+      "image": "https://i.ibb.co/5gBFWmHN/Cappuccino-Photoroom.png",
+      "discount": 50,
+      "price": 1
+    },
+    {
+      "id": 5,
+      "coffeeName": "Macchiato",
+      "description": "Espresso marked with a small amount of milk or foam.",
+      "origin": "Italy",
+      "bestTime": "After meals",
+      "image": "https://i.ibb.co/qqdVGTs/Macchiato.png",
+      "discount": 50,
+      "price": 3
+    },
+    {
+      "id": 6,
+      "coffeeName": "Mocha",
+      "description": "Espresso mixed with chocolate syrup and steamed milk.",
+      "origin": "Yemen (Mocha Port), modern form from Italy/USA",
+      "bestTime": "Afternoon treat",
+      "image": "https://i.ibb.co/h1sxwXhV/Mocha.png",
+      "discount": 50,
+      "price": 2.3
+    },
+    {
+      "id": 7,
+      "coffeeName": "Flat White",
+      "description": "Espresso with smooth, velvety steamed milk and no foam.",
+      "origin": "Australia or New Zealand",
+      "bestTime": "Morning or brunch",
+      "image": "https://i.ibb.co/B2VwWQSr/Flat-White.png",
+      "discount": 25,
+      "price": 4
+    },
+    {
+      "id": 8,
+      "coffeeName": "Cold Brew",
+      "description": "Slow-brewed coffee made with cold water for a smooth taste.",
+      "origin": "Japan (modern popularity in USA)",
+      "bestTime": "Hot days or on-the-go",
+      "image": "https://i.ibb.co/4nsKTBZ8/Cold-Brew.png",
+      "discount": 50,
+      "price": 1.5
+    },
+    {
+      "id": 9,
+      "coffeeName": "Turkish Coffee",
+      "description": "Strong, unfiltered coffee boiled in a small pot (cezve).",
+      "origin": "Turkey/Ottoman Empire",
+      "bestTime": "After meals or with dessert",
+      "image": "https://i.ibb.co/Wv2NnmTL/Turkish-Coffee.png",
+      "discount": 10,
+      "price": 2
+    }
+  ],
+  "teams": [
+    {
+      "name": "Christie Roure",
+      "role": "Head Barista",
+      "bio": "Christie ensures every cup of coffee is brewed to perfection. With years of experience in coffee craft, she inspires our team to create unique flavors and a welcoming atmosphere.",
+      "image": "/images/about/img6.jpg",
+      "social": "/images/about/facebook-svg.svg"
+    },
+    {
+      "name": "Guy Lassausaie",
+      "role": "Barista",
+      "bio": "Guy loves crafting espresso and latte art. Passionate about sharing coffee stories, he makes every visit a special experience for our guests.",
+      "image": "/images/about/img7.jpg",
+      "social": "/images/about/facebook-svg.svg"
+    },
+    {
+      "name": "Margarette Neva",
+      "role": "Waitress",
+      "bio": "Margarette provides warm and friendly service, making every customer feel at home. She brings energy and care to every table she serves.",
+      "image": "/images/about/img9.jpg",
+      "social": "/images/about/facebook-svg.svg"
+    },
+    {
+      "name": "Camille Ozborne",
+      "role": "Cashier",
+      "bio": "Camille ensures smooth and cheerful service at the counter. She loves interacting with customers and sharing the joy of coffee.",
+      "image": "/images/about/img8.jpg",
+      "social": "/images/about/facebook-svg.svg"
+    }
+  ],
+
+  "blog": [
+    {
+      "id": 1,
+      "image": "/images/blog/img1.jpg",
+      "time": "August6 20, 2025 with 3 Comments",
+      "title": "  Article from Steve Harvey – “This Book Changed My Life”",
+      "description": " Analytics is often simply numbers and graphs. It’s easy to understand why some people are intimidated by analytics. But that doesn’t have to be the way. Analytics can be joyful and fun. It should help you take away the tedious work of dissecting graphs and calculating numbers. Analytics should feel like your assistant. With Analyze, you don’t just get charts. You’ll also see three recommended times to post on Instagram. They are times when  your predicted reach is among the highest during the week. Most people would find the three recommendations sufficient but if you want more, you can then dive into the charts."
+    },
+    {
+      "id": 2,
+      "image": "/images/blog/img2.jpg",
+      "time": "August 20, 2025 with 3 Comments",
+      "title": " Time Article “Top Mistakes Really Smart People Make Without Realizing”",
+      "description": "Search “best time to post on Instagram” and you’ll find countless articles telling you when to post according to studies of a few million Instagram posts.  We have written such articles ourselves. For a long time, we thought that’s the way to grow our reach and engagement on social media.  But that is no longer the best approach.  There are many reasons for the change. Most importantly, you now have much more data about your own posts and followers. The best time to post is when your followers are online and engaging with your posts.  How do you know when to post?  Well, you can now get recommendations for when to post on Instagram to maximize your reach, with Analyze. Curious to find out more? Read on."
+    },
+    {
+      "id": 3,
+      "image": "/images/blog/img3.jpg",
+      "time": "August 09, 2025 with 3 Comments",
+      "title": "  TheGuardian article “Beware the gravitational pull of mediocrity””",
+      "description": "Search “best time to post on Instagram” and you’ll find countless articles telling you when to post according to studies of a few million Instagram posts.  We have written such articles ourselves. For a long time, we thought that’s the way to grow our reach and engagement on social media.  But that is no longer the best approach.  There are many reasons for the change. Most importantly, you now have much more data about your own posts and followers. The best time to post is when your followers are online and engaging with your posts.  How do you know when to post?  Well, you can now get recommendations for when to post on Instagram to maximize your reach, with Analyze. Curious to find out more? Read on."
+    },
+    {
+      "id": 4,
+      "image": "/images/blog/img4.jpg",
+      "time": "October 20, 2021 with 3 Comments",
+      "title": "  A Crash Course in Custom Audiences for Your Social Media Advertisements",
+      "description": " Search “best time to post on Instagram” and you’ll find countless articles telling you when to post according to studies of a few million Instagram posts.  We have written such articles ourselves. For a long time, we thought that’s the way to grow our reach and engagement on social media.  But that is no longer the best approach.  There are many reasons for the change. Most importantly, you now have much more data about your own posts and followers. The best time to post is when your followers are online and engaging with your posts.  How do you know when to post?  Well, you can now get recommendations for when to post on Instagram to maximize your reach, with Analyze. Curious to find out more? Read on."
+    },
+
+    {
+      "id": 5,
+      "image": "/images/blog/img5.jpg",
+      "time": "March 17, 2021 with 3 Comments",
+      "title": "The Newest Black Friday + Cyber Monday Ideas for Your Social Media Marketing",
+      "description": "Search “best time to post on Instagram” and you’ll find countless articles telling you when to post according to studies of a few million Instagram posts. We have written such articles ourselves. For a long time, we thought that’s the way to grow our reach and engagement on social media. But that is no longer the best approach. There are many reasons for the change. Most importantly, you now have much more data about your own posts and followers. The best time to post is when your followers are online and engaging with your posts. How do you know when to post? Well, you can now get recommendations for when to post on Instagram to maximize your reach, with Analyze. Curious to find out more? Read on."
+    }
+  ],
+
+  "categories": [
+    {
+      "id": 1,
+      "name": "Chief Picks"
+    },
+    {
+      "id": 2,
+      "name": "Foods"
+    },
+    {
+      "id": 3,
+      "name": "Recepies"
+    },
+    {
+      "id": 4,
+      "name": "Vegeterien"
+    }
+  ]
+}
