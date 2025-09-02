@@ -9,7 +9,7 @@ import { CoffeeProvider } from "./contexts/CoffeeContext";
 import { CartProvider } from "./contexts/CartContext";
 import { ScrollAnimationProvider } from "./contexts/ScrollAnimationContext";
 
-import Home from "./pages/HomePage";
+import Home from "./pages/HomePage.jsx";
 import Menu from "./pages/MenuPage";
 import About from "./pages/AboutPage";
 import Contact from "./pages/ContactPage";
