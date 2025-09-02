@@ -1,0 +1,115 @@
+.home {
+  background-image: $gradient-coffee;
+  min-height: 100vh;
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+  &__right {
+    aspect-ratio: 13 / 10;
+    width: 80%;
+    background-image: url("/images/home/img1.png");
+    justify-self: right;
+    align-self: center;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: fade-left 1s ease 2s backwards;
+  }
+  &__left {
+    overflow: hidden;
+    padding: 2rem;
+    &--button {
+      animation: fade-up 1s ease 1.5s backwards;
+    }
+  }
+  &__title {
+    line-height: 7rem;
+    font-size: 5rem;
+    letter-spacing: 11px;
+    text-transform: uppercase;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    animation: fade-right 1.5s ease;
+
+    &-highlight {
+      text-transform: capitalize;
+      line-height: 2rem;
+      letter-spacing: 7px;
+      font-size: 2.5rem;
+      opacity: 60%;
+      //margin-left: 4rem;
+    }
+  }
+
+  &__description {
+    margin-bottom: 5rem;
+    animation: fade-right 1s ease 1s backwards;
+  }
+}
+
+//RESPONSIVE SOURCE CODES
+
+@include respond(big-desktop) {
+  .home {
+    &__content {
+      padding: 8rem 1rem;
+    }
+  }
+}
+
+@include respond(tab-landBig) {
+  .home {
+    &__content {
+      padding: 8rem 1rem;
+    }
+    &__right {
+      width: 100%;
+      align-self: center;
+      aspect-ratio: 7 / 5;
+    }
+  }
+}
+@include respond(tab-land) {
+  .home {
+    &__content {
+      margin: 25rem auto;
+      grid-template-columns: repeat(auto-fit, minmax(395px, 1fr));
+      gap: 0 50px;
+
+      padding: 0;
+    }
+
+    &__right {
+      width: 100%;
+      align-self: center;
+
+      aspect-ratio: 5 / 5;
+    }
+  }
+}
+
+@include respond(tab-port) {
+  .home {
+    padding: 0 !important;
+    min-height: 190vh;
+
+    &__content {
+      margin: 10rem auto;
+
+      display: flex;
+      flex-direction: column;
+      gap: 100px 0;
+    }
+    &__right {
+      aspect-ratio: 5 / 3;
+    }
+  }
+}
+@include respond(phone) {
+  .home {
+    padding: 0 !important;
+    min-height: 165vh;
+  }
+}

@@ -1,0 +1,89 @@
+.menu_coffeeLists {
+  margin: 4rem auto;
+  box-shadow: $shadow-xl;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
+  gap: 10px;
+  @media screen and (max-width: 1800px) {
+    gap: 15px;
+  }
+  &-card {
+    position: relative;
+    height: 38rem;
+    padding: 1rem 2rem;
+    border: 1px solid $coffee-accent-blue;
+    &::before {
+      content: "";
+      position: absolute;
+      right: 0px;
+      top: 0;
+      width: 150px;
+      height: 150px;
+      clip-path: circle(50% at 0 0);
+      transform: rotate(90deg);
+      background: $coffee-neutral-medium;
+    }
+
+    .coffeeName {
+      text-align: center;
+      text-transform: capitalize;
+      letter-spacing: 7px;
+    }
+    .original {
+      font-size: 1.5rem;
+      margin-top: 0.7rem;
+    }
+
+    .description {
+      font-size: 1.3rem;
+      letter-spacing: 1px;
+      margin-top: 1rem;
+    }
+    .coffeeImg {
+      height: 15rem;
+      margin-top: 4rem;
+      @media screen and (max-width: 1800px) {
+        height: 13rem;
+      }
+    }
+    .discounted {
+      position: absolute;
+      color: $coffee-text-light;
+      background-color: $coffee-neutral-medium;
+      top: 150px;
+      right: 20px;
+      opacity: 80%;
+      font-size: 2.1rem;
+      font-weight: 700;
+      width: 9.3rem;
+      height: 8.8rem;
+      padding: 1.7rem 2.5rem;
+      line-height: 28px;
+      border-radius: 49% 51% 17% 44% / 17% 38% 32% 44%;
+      @media screen and (max-width: 1800px) {
+        top: 200px;
+        right: 10px;
+        padding: 1.5rem 2.5rem;
+        width: 9rem;
+        height: 8.5rem;
+        span {
+          font-size: 1.7rem;
+        }
+      }
+      @media screen and (max-width: 900px) {
+        line-height: 20px;
+        top: 140px;
+      }
+    }
+    .price {
+      position: absolute;
+      left: 20px;
+      bottom: 10px;
+      color: $coffee-text-light;
+      font-size: 1.8rem;
+    }
+  }
+}
+
+// RESPONISVE CODES

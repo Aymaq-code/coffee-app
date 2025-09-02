@@ -1,0 +1,63 @@
+// typography
+
+@font-face {
+  font-family: primary;
+  src: url(/public/fonts/Marhey-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: secondary;
+  src: url(/public/fonts/Andika-Regular.ttf);
+}
+
+@font-face {
+  font-family: treasury;
+  src: url(/public/fonts/WinkySans-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: pacifico;
+  src: url(/public/fonts/Pacifico-Regular.ttf);
+}
+
+h1 {
+  font-family: "primary", sans-serif;
+  font-size: 6rem;
+  font-weight: 500;
+  color: $coffee-text-dark;
+}
+
+h2 {
+  font-family: "treasury", sans-serif;
+  letter-spacing: 4px;
+  font-size: 3rem;
+  font-weight: 700;
+  color: $coffee-accent-cream;
+}
+h3,
+h4,
+p {
+  font-family: "secondary", sans-serif;
+  color: $coffee-text-light;
+  letter-spacing: 2px;
+}
+
+p {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}
+
+a {
+  font-family: "secondary", sans-serif !important;
+  //color: $coffee-fontColor-2;
+  color: $coffee-accent-cream;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+li {
+  font-family: "secondary", sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+  transition: all 0.3s ease;
+}

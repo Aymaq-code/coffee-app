@@ -1,0 +1,142 @@
+.paymentPage {
+  background: linear-gradient(180deg, #3b2f2f, rgb(190, 199, 211));
+
+  &__contents {
+    max-width: 70rem;
+    margin: auto;
+    padding: 4rem 2rem;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    &--box {
+      width: 100%;
+      max-width: 60rem;
+      margin: auto;
+
+      h3 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        color: $coffee-neutral-light;
+      }
+
+      p {
+        letter-spacing: 1px;
+        font-weight: bold;
+        font-size: 1.6rem;
+        color: $coffee-primary-dark;
+      }
+
+      input,
+      select {
+        all: unset;
+        width: 100%;
+        padding: 0.7rem 1rem;
+        border-radius: 8px;
+        box-shadow: 0 0 2px 1px $coffee-accent-blue;
+        color: $coffee-neutral-light;
+        margin-top: 0.8rem;
+
+        &::placeholder {
+          color: $coffee-neutral-medium;
+        }
+
+        &[type="number"] {
+          -moz-appearance: textfield;
+          &::-webkit-inner-spin-button,
+          &::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+          }
+        }
+      }
+      option {
+        all: unset;
+        background-color: $coffee-bg-darker;
+        color: $coffee-primary-dark;
+      }
+
+      &-accounts {
+        display: flex;
+        gap: 1rem;
+        justify-content: space-between;
+        border-bottom: 1px solid $coffee-accent-blue;
+        padding-bottom: 2rem;
+
+        div {
+          display: flex;
+          align-items: center;
+          gap: 0.7rem;
+
+          padding: 0.4rem 4rem;
+          border-radius: 4px;
+          box-shadow: 0 0 2px 1px $coffee-accent-blue;
+          cursor: pointer;
+
+          img {
+            height: 3rem;
+          }
+        }
+      }
+
+      &-cardNo {
+        margin-top: 3rem;
+      }
+
+      &-cardHolder {
+        margin-top: 2rem;
+
+        &_details {
+          display: flex;
+          gap: 1rem;
+          border-bottom: 1px solid $coffee-accent-blue;
+          padding-bottom: 2rem;
+          margin-top: 1rem;
+
+          input {
+            width: 100%;
+            text-align: center;
+          }
+        }
+      }
+
+      &-confirm {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 3rem;
+      }
+
+      .primary {
+        width: 100%;
+        margin-top: 3rem;
+      }
+    }
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    &__contents {
+      padding: 2rem;
+      &--box {
+        h3 {
+          font-size: 1.6rem;
+        }
+        &-accounts {
+          flex-direction: column;
+          align-items: stretch;
+          div {
+            justify-content: center;
+          }
+        }
+        &-cardHolder_details {
+          flex-direction: column;
+          input {
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+}

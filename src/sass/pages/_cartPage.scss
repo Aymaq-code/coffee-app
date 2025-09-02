@@ -1,0 +1,132 @@
+.cartPage {
+  background-image: linear-gradient(
+    180deg,
+    $coffee-bg-dark 0%,
+    $coffee-accent-blue 100%
+  );
+
+  &__contents {
+    box-shadow: $shadow-coffee;
+    padding: 3rem 3rem 8rem 3rem;
+    max-width: 85rem;
+    margin: 2rem auto;
+
+    @media screen and (max-width: 1200px) {
+      max-width: 95rem;
+    }
+
+    &-btns {
+      //border: 2px solid red;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 4rem;
+
+      @media screen and (max-width: 900px) {
+        button {
+          padding: 1rem 2.5rem;
+          font-size: 1.5rem;
+        }
+      }
+      @media screen and (max-width: 360px) {
+        button {
+          padding: 1rem 1.8rem;
+          font-size: 1.2rem;
+        }
+      }
+    }
+    &-user {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      button {
+        border-radius: 4px;
+        padding: 0.9rem 2rem;
+        font-weight: 300;
+        font-size: 1rem;
+      }
+    }
+    &-total {
+      strong {
+        font-size: 1.5rem;
+        color: $coffee-neutral-dark;
+      }
+    }
+    &-cart {
+      //border: 2px solid green;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 2rem;
+
+      .details {
+        width: 380px;
+        border-radius: 10px;
+        margin-top: 2rem;
+        padding: 1rem 2rem;
+        box-shadow: $shadow-coffee;
+        display: flex;
+        justify-content: space-between;
+        gap: 0 10px;
+
+        @media screen and (max-width: 900px) {
+          width: 100%;
+        }
+
+        img {
+          height: 10rem;
+          display: block;
+          //border: 2px solid blue;
+          align-self: center;
+          // width: 22%;
+          @media screen and (max-width: 900px) {
+            height: 20rem;
+          }
+        }
+
+        .description {
+          //border: 2px solid blue;
+          width: 60%;
+          align-self: center;
+
+          p:nth-child(1) {
+            font-size: 1.6rem;
+            letter-spacing: 2px;
+            font-weight: bold;
+          }
+          p:nth-child(2) {
+            font-size: 1.3rem;
+            letter-spacing: 1px;
+          }
+          p:nth-child(3),
+          p:nth-child(4) {
+            font-size: 1.3rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+          }
+
+          &__buttons {
+            // border: 1px solid red;
+            display: flex;
+            gap: 0 20px;
+            margin-top: 2rem;
+            button {
+              all: unset;
+              padding: 0.2rem 1.5rem;
+              border: 1px solid $coffee-neutral-medium;
+              border-radius: 4px;
+              cursor: pointer;
+              transition: all 0.3s ease;
+
+              &:hover {
+                background-color: $coffee-neutral-medium;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

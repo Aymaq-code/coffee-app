@@ -1,0 +1,125 @@
+.menu__head {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($coffee-bg-darker, 0.9),
+      rgba($coffee-bg-darker, 0.8),
+      rgba($coffee-bg-darker, 0.8),
+      rgba($coffee-bg-darker, 0.8),
+      rgba($coffee-bg-darker, 0.9)
+    ),
+    url("/images/menu/headImage.jpg");
+
+  background-size: cover;
+  background-position: bottom;
+  aspect-ratio: 15 / 5;
+
+  @include flexCenter;
+  flex-direction: column;
+
+  &-text {
+    max-width: 95rem;
+    text-align: center;
+    margin: 7rem auto;
+
+    & h1 {
+      line-height: 5.5rem;
+      color: $coffee-text-light;
+
+      & span:nth-child(1) {
+        font-size: 6rem;
+        letter-spacing: 13px;
+      }
+
+      & span:nth-child(3) {
+        font-size: 2.5rem;
+        letter-spacing: 4px;
+        text-transform: capitalize;
+      }
+    }
+
+    & p {
+      line-height: 2.3rem;
+      margin-top: 5rem;
+      color: $coffee-text-light;
+    }
+  }
+
+  &-footer {
+    width: 100%;
+    opacity: 90%;
+
+    &--left {
+      @include flexCenter;
+      position: absolute;
+      bottom: 0;
+      gap: 0 4rem;
+      margin-left: 1rem;
+      margin-bottom: 0.3rem;
+      justify-self: self-start;
+
+      & i {
+        font-size: 3rem;
+        color: $coffee-primary-light;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        &:hover {
+          transform: scale(1.2) translateY(-5px);
+          color: $coffee-primary-light;
+        }
+      }
+    }
+    &--right {
+      justify-self: right;
+      display: flex;
+
+      & input {
+        border: none;
+        outline: none;
+        font-size: 1.7rem;
+        padding: 1.4rem 1rem;
+        color: $coffee-primary-light;
+        opacity: 75%;
+        &::placeholder {
+          color: $coffee-text-secondary;
+          font-size: 1.3rem;
+          letter-spacing: 3px;
+        }
+      }
+      button {
+        &:hover {
+          box-shadow: none;
+          transform: none !important;
+        }
+      }
+    }
+  }
+}
+
+@include respond(phone) {
+  .menu__head-text {
+    max-width: 100%;
+    margin: 3rem auto;
+
+    & p {
+      line-height: 2.3rem;
+      margin-top: 2.3rem;
+    }
+  }
+  .menu__head-footer {
+    height: 12rem;
+
+    &--right {
+      width: 100%;
+
+      button {
+        width: 30%;
+      }
+      input {
+        width: 70%;
+      }
+    }
+    &--left {
+      justify-self: center;
+    }
+  }
+}

@@ -1,0 +1,180 @@
+.aboutPagePart2 {
+  position: relative;
+  background: linear-gradient(
+    180deg,
+    $coffee-bg-dark 50%,
+    $coffee-bg-darker 80%
+  );
+  padding: 1rem 0.5rem;
+
+  &__img-1,
+  &__img-2,
+  &__img-3 {
+    position: absolute;
+    z-index: -1;
+    opacity: 0.4;
+    pointer-events: none;
+  }
+
+  &__img-1 {
+    height: 35rem;
+    right: 0;
+    top: 2rem;
+    animation: waverLeft 1s ease;
+    animation-timeline: view();
+    animation-range: entry 0% cover 300%;
+  }
+  &__img-2 {
+    height: 17rem;
+    left: 0;
+    top: 0;
+
+    animation: waverRight 1s ease;
+    animation-timeline: view();
+    animation-range: entry 0% cover 300%;
+  }
+  &__img-3 {
+    height: 18rem;
+    bottom: 0;
+    right: 0;
+    animation: waverLeft 1s ease;
+    animation-timeline: view();
+    animation-range: entry 0% cover 300%;
+  }
+
+  &__contents {
+    display: flex;
+    gap: 0 30px;
+
+    &-left {
+      padding: 2rem;
+      width: 60%;
+      animation: none;
+
+      h2 {
+        font-size: 2.6rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        opacity: 0;
+      }
+
+      h3 {
+        font-size: 1.6rem;
+        margin-top: 2rem;
+        opacity: 0;
+
+        &:nth-of-type(2) {
+          margin-top: 4rem;
+        }
+      }
+
+      p {
+        margin-top: 2rem;
+        line-height: 1.7;
+        opacity: 0;
+      }
+
+      .certificate-img {
+        margin-top: 1.5rem;
+        height: 6rem;
+        object-fit: contain;
+        opacity: 0;
+      }
+    }
+
+    &-right {
+      width: 50%;
+      position: relative;
+      img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        box-shadow: $shadow-xl;
+      }
+      &--wrapper1 {
+        position: absolute;
+        right: 0;
+        height: 80%;
+        opacity: 0;
+
+        img {
+          transform: translateY();
+          transition: transform 0.3s ease;
+          animation: waverDown 1s ease;
+          animation-timeline: view();
+          animation-range: entry 0% cover 90%;
+        }
+      }
+      &--wrapper2 {
+        position: absolute;
+        bottom: 0;
+        width: 50%;
+        opacity: 0;
+
+        img {
+          transform: translateY(30px);
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+          animation: waverDown 1s ease;
+          animation-timeline: view();
+          animation-range: entry 0% cover 100%;
+        }
+      }
+    }
+  }
+}
+
+// Animate on scroll
+.in-view-once {
+  .aboutPagePart2__contents-left {
+    h2 {
+      animation: fade-right 1.2s ease forwards;
+    }
+    h3 {
+      animation: fade-right 1.4s ease 0.5s forwards;
+    }
+
+    p {
+      animation: fade-right 1.6s ease 1s forwards;
+    }
+  }
+  .crt-ard {
+    animation: fade-right 1.4s ease 2s forwards;
+  }
+  .certificate-img {
+    animation: fade-right 1.4s ease 2s forwards;
+  }
+  .aboutPagePart2__contents-right--wrapper1 {
+    animation: fade-down 0.7s ease-in forwards 1.8s;
+  }
+
+  .aboutPagePart2__contents-right--wrapper2 {
+    animation: fade-right 1s ease-in forwards 1.9s;
+  }
+}
+
+// RESPONSIVE STYLES
+@include respond(tab-port) {
+  .aboutPagePart2 {
+    &__contents {
+      flex-direction: column-reverse;
+      gap: 80px 0;
+
+      &-left {
+        width: 100%;
+      }
+      &-right {
+        width: 100%;
+        height: 60rem;
+
+        &--wrapper1 {
+          width: 75%;
+          height: 100%;
+        }
+        &--wrapper2 {
+          width: 45%;
+          height: 60%;
+        }
+      }
+    }
+  }
+}

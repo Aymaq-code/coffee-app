@@ -1,0 +1,25 @@
+.logo {
+  height: 6rem;
+  width: 15rem;
+
+  cursor: pointer;
+
+  & img {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@include respond(tab-port) {
+  .logo {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+  }
+}
+@include respond(phone) {
+  .logo {
+    left: 1rem;
+    top: 10px;
+  }
+}

@@ -1,0 +1,12 @@
+// menu.scss
+.menu {
+  background: $gradient-coffee;
+  min-height: 100vh;
+
+  &_cnt {
+    margin: 6rem auto;
+    padding: $spacing-md 0;
+    max-width: 1200px;
+    border-radius: $border-radius-lg;
+  }
+}
