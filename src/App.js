@@ -39,7 +39,7 @@ function App() {
       <CoffeeProvider>
         <CartProvider>
           <ScrollAnimationProvider>
-            <HashRouter basename="/coffee-app">
+            <HashRouter>
               <ScrollToTop />
               <Routes>
                 <Route index element={<Home />} />
