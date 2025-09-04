@@ -43,17 +43,17 @@ function App() {
               <ScrollToTop />
               <Routes>
                 <Route index element={<Home />} />
-                <Route path="/menu" element={<Menu />} />
-                <Route path="/reserve" element={<ReservePage />} />
-                <Route path="/about" element={<About />} />
+                <Route path="menu" element={<Menu />} />
+                <Route path="reserve" element={<ReservePage />} />
+                <Route path="about" element={<About />} />
                 <Route path="blog" element={<BlogPage />}>
                   <Route index element={<Navigate to="page/1" replace />} />
                   <Route path="page/:pageNo" element={<BlogPageDynamic />} />
                 </Route>
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/login" element={<LoginPage />} />
-                <Route path="/cart" element={<CartPage />} />
-                <Route path="/payment" element={<PaymentPage />} />
+                <Route path="contact" element={<Contact />} />
+                <Route path="login" element={<LoginPage />} />
+                <Route path="cart" element={<CartPage />} />
+                <Route path="payment" element={<PaymentPage />} />
                 <Route path="*" element={<ErrorPage />} />
               </Routes>
             </HashRouter>
