@@ -39,7 +39,7 @@ function App() {
       <CoffeeProvider>
         <CartProvider>
           <ScrollAnimationProvider>
-            <BrowserRouter>
+            <BrowserRouter basename="/coffee-app">
               <ScrollToTop />
               <Routes>
                 <Route index element={<Home />} />
