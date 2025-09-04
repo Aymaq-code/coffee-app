@@ -1,0 +1,11 @@
+.blogPagePosts {
+  //border: 2px solid green;
+  overflow: hidden;
+}
+
+@include respond(tab-land) {
+  .blogPagePosts {
+    //margin-top: 12rem;
+    padding: 0.3rem 1rem;
+  }
+}

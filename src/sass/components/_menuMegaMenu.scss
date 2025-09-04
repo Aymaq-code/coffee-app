@@ -1,0 +1,45 @@
+.menuMega {
+  position: relative;
+  background-color: $coffee-bg-dark;
+
+  border-radius: 7px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  &__left {
+    padding: 1rem !important;
+    &--img {
+      width: 100%;
+      margin-top: 2.3rem;
+    }
+  }
+
+  &__right {
+    padding: 1rem !important;
+
+    &--img {
+      width: 100%;
+      margin-top: 1rem;
+    }
+  }
+
+  &__top {
+    h2 {
+      font-size: 1.6rem;
+      letter-spacing: 3px;
+      line-height: 2.2rem;
+      text-transform: capitalize;
+      margin-top: 1rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      letter-spacing: 2px;
+      text-align: left;
+      line-height: 1.5rem;
+      margin-top: 1rem;
+      font-weight: 300;
+      color: $coffee-neutral-medium;
+    }
+  }
+}

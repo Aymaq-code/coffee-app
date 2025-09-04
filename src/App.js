@@ -1,24 +1,66 @@
-import logo from './logo.svg';
-import './App.css';
+import {
+  BrowserRouter,
+  Navigate,
+  Route,
+  Routes,
+  useLocation,
+} from "react-router-dom";
+import { CoffeeProvider } from "./contexts/CoffeeContext.js";
+import { CartProvider } from "./contexts/CartContext.js";
+import { ScrollAnimationProvider } from "./contexts/ScrollAnimationContext.js";
+
+import Home from "./pages/Homepage.js";
+import Menu from "./pages/MenuPage.js";
+import About from "./pages/AboutPage.js";
+import Contact from "./pages/ContactPage.js";
+import LoginPage from "./pages/LoginPage.js";
+import BlogPage from "./pages/BlogPage.js";
+import BlogPageDynamic from "./components/BlogPageDynamic.js";
+import ReservePage from "./pages/ReservePage.js";
+import ErrorPage from "./pages/ErrorPage.js";
+import AuthProvider from "./contexts/FakeAuthContext.js";
+import CartPage from "./pages/CartPage.js";
+import PaymentPage from "./pages/PaymentPage.js";
+import { useEffect } from "react";
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AuthProvider>
+      <CoffeeProvider>
+        <CartProvider>
+          <ScrollAnimationProvider>
+            <BrowserRouter>
+              <ScrollToTop />
+              <Routes>
+                <Route index element={<Home />} />
+                <Route path="/menu" element={<Menu />} />
+                <Route path="/reserve" element={<ReservePage />} />
+                <Route path="/about" element={<About />} />
+                <Route path="blog" element={<BlogPage />}>
+                  <Route index element={<Navigate to="page/1" replace />} />
+                  <Route path="page/:pageNo" element={<BlogPageDynamic />} />
+                </Route>
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/login" element={<LoginPage />} />
+                <Route path="/cart" element={<CartPage />} />
+                <Route path="/payment" element={<PaymentPage />} />
+                <Route path="*" element={<ErrorPage />} />
+              </Routes>
+            </BrowserRouter>
+          </ScrollAnimationProvider>
+        </CartProvider>
+      </CoffeeProvider>
+    </AuthProvider>
   );
 }
 

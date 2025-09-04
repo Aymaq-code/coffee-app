@@ -1,0 +1,296 @@
+// Buttons Base Styles
+.btn {
+  border: none;
+  outline: none;
+  font-family: "Quicksand", sans-serif;
+  color: contrast-color($coffee-primary);
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-sm;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+
+  // for accessibility
+  &:focus-visible {
+    outline: 2px solid $coffee-primary-light;
+    outline-offset: 2px;
+  }
+
+  // from mobile
+  -webkit-tap-highlight-color: transparent;
+
+  // for disabled
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none !important;
+  }
+}
+
+// Button Variants
+.primary {
+  background: $gradient-dark;
+  color: $coffee-text-light;
+  font-weight: $font-weight-medium;
+  font-size: 1.6rem;
+  padding: $spacing-md $spacing-lg;
+  border-radius: $border-radius-md;
+  box-shadow: $shadow-coffee;
+
+  &:hover:not(:disabled) {
+    background: linear-gradient(
+      135deg,
+      hover-color($coffee-primary) 0%,
+      hover-color($coffee-primary-dark) 100%
+    );
+    transform: translateY(-2px);
+    box-shadow: $shadow-coffee;
+    color: $coffee-text-light;
+  }
+
+  &:active:not(:disabled) {
+    transform: translateY(0);
+    box-shadow: $shadow-sm;
+  }
+}
+
+.secondary {
+  background: $coffee-bg-darker;
+  color: $coffee-text-light;
+  font-weight: $font-weight-bold;
+  font-size: 1.6rem;
+  padding: $spacing-lg $spacing-2xl;
+  border-radius: 100px;
+  box-shadow: $shadow-coffee;
+
+  &:hover:not(:disabled) {
+    background: $coffee-primary;
+    color: $coffee-text-light;
+    transform: translateY(-2px);
+    box-shadow: $shadow-md;
+  }
+
+  &:active:not(:disabled) {
+    transform: translateY(0);
+  }
+}
+
+// Join Button
+.join {
+  background: $coffee-primary;
+  color: $coffee-text-light;
+  padding: $spacing-lg $spacing-xl;
+  border-radius: $border-radius-md 0 0 $border-radius-md;
+  font-weight: $font-weight-medium;
+  box-shadow: $shadow-md;
+
+  &:hover:not(:disabled) {
+    background: hover-color($coffee-primary);
+    transform: translateY(-2px);
+    box-shadow: $shadow-lg;
+    color: $coffee-text-light;
+  }
+
+  &:active:not(:disabled) {
+    transform: translateY(0);
+  }
+}
+
+// Order Button
+.orderBtn {
+  width: 5rem;
+  height: 5rem;
+  padding: 0;
+  background: transparent;
+  position: absolute;
+  left: calc(310px + 5rem);
+  bottom: 0;
+  animation: fade-right 0.5s ease;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+
+  & img {
+    width: 60%;
+    height: 60%;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover:not(:disabled) {
+    transform: scale(1.1);
+    //box-shadow: $shadow-xl;
+
+    & img {
+      transform: rotate(15deg);
+    }
+  }
+
+  &:active:not(:disabled) {
+    transform: scale(0.95);
+  }
+}
+
+// Menu Toggle Button
+.toggle_btn {
+  display: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: $spacing-sm;
+  //z-index: $z-index-sticky;
+
+  // برای accessibility
+  &:focus-visible {
+    outline: 2px solid $coffee-primary-light;
+    outline-radius: $border-radius-sm;
+  }
+}
+
+.menu_btn {
+  width: 4rem;
+  height: 0.4rem;
+  background-color: $coffee-text-light;
+  position: relative;
+  display: block;
+  transition: all 0.3s ease;
+  border-radius: 0.2rem;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 4rem;
+    height: 0.4rem;
+    background-color: $coffee-text-light;
+    transition: all 0.3s ease;
+    border-radius: 0.2rem;
+    left: 0;
+  }
+
+  &::before {
+    transform: translateY(-1.2rem);
+  }
+
+  &::after {
+    transform: translateY(1.2rem);
+  }
+}
+
+.open {
+  background-color: transparent;
+
+  &::before {
+    transform: rotate(45deg) translateY(0);
+    top: 0;
+  }
+
+  &::after {
+    transform: rotate(-45deg) translateY(0);
+    top: 0;
+  }
+}
+
+// RESPONSIVE STYLES
+@include respond(tab-port) {
+  .toggle_btn {
+    display: block;
+    position: absolute;
+    right: 2.5rem;
+    top: 4.5rem;
+  }
+
+  .primary {
+    font-size: 2.5rem;
+    padding: $spacing-md $spacing-2xl;
+  }
+
+  // responsive order button
+
+  .orderBtn {
+    left: calc(215px + 5rem);
+  }
+}
+
+@include respond(phone) {
+  .toggle_btn {
+    right: 2rem;
+    top: 3.5rem;
+  }
+
+  .btn {
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+  }
+}
+
+@include respond(smallPhone) {
+  .secondary {
+    padding: $spacing-sm $spacing-md;
+    font-size: 1.4rem;
+    margin-top: $spacing-lg;
+  }
+
+  .menu_btn {
+    width: 3rem;
+    height: 0.3rem;
+
+    &::before,
+    &::after {
+      width: 3rem;
+      height: 0.3rem;
+    }
+
+    &::before {
+      transform: translateY(-0.9rem);
+    }
+
+    &::after {
+      transform: translateY(0.9rem);
+    }
+  }
+
+  .primary {
+    font-size: 2rem;
+    padding: $spacing-sm $spacing-xl;
+  }
+}
+
+// Loading state (اختیاری)
+.btn.loading {
+  position: relative;
+  color: transparent;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: currentColor;
+    animation: spin 0.8s ease infinite;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// Button Sizes (اختیاری)
+.btn-sm {
+  font-size: 1.4rem;
+  padding: $spacing-sm $spacing-md;
+}
+
+.btn-lg {
+  font-size: 2rem;
+  padding: $spacing-lg $spacing-xl;
+}

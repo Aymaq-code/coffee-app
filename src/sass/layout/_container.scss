@@ -1,0 +1,14 @@
+.container {
+  //border: 1px solid red;
+  margin: 10rem auto !important;
+  max-width: 1300px;
+  position: relative;
+  //  z-index: -1;
+}
+
+@include respond(big-desktop) {
+  .container {
+    //border: 5px solid yellow;
+    max-width: 1500px;
+  }
+}

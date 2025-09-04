@@ -1,0 +1,30 @@
+.categories {
+  justify-self: right;
+  width: 80%;
+  border-radius: 30px;
+  padding: 2rem;
+  margin-top: 7rem;
+  box-shadow: $shadow-coffee;
+
+  h2 {
+    color: $coffee-primary-light;
+  }
+
+  &__contents {
+    margin-top: 2rem;
+    .post {
+      border-bottom: 1px solid $coffee-primary-light;
+      padding: 2rem 0;
+
+      a {
+        font-size: 1.7rem;
+      }
+    }
+  }
+}
+
+@include respond(tab-land) {
+  .categories {
+    width: 100%;
+  }
+}

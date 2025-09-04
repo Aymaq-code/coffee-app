@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+# Kabul Coffee Shop
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to **Kabul Coffee**, a modern coffee shop website built with **React**. This project showcases both the physical coffee shop experience and online services including menu browsing, table reservations, and blog updates.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Table of Contents
 
-### `npm start`
+- [Project Overview](#project-overview)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Project Structure](#project-structure)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Project Overview
 
-### `npm test`
+**Kabul Coffee** is designed to provide a seamless user experience for coffee lovers. Users can:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Explore a wide variety of coffee menus.
+- Reserve tables online through an easy booking system.
+- Learn about the café, its team, and awards.
+- Read the latest blog articles.
+- Contact the café easily via the contact form or social media links.
 
-### `npm run build`
+The design emphasizes **responsive layouts**, professional typography, and visually appealing imagery for a cozy, welcoming vibe.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Features
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Menu Mega Menu**: Explore freshly brewed coffee blends and café spaces.
+- **Reservation System**: Online table booking with form validation.
+- **About Section**: Detailed café overview, team members, and awards.
+- **Blog Page**: Display of latest coffee-related articles with images, time, and description.
+- **Contact Page**: Google Maps integration, contact cards, and newsletter subscription.
+- **Footer & Social Links**: Connect with Kabul Coffee on Facebook, LinkedIn, GitHub, and WhatsApp.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Technologies Used
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **React** (v18+) – Component-based UI
+- **React Router DOM** – Client-side routing
+- **SCSS** – Styles with variables, mixins, and nesting
+- **Font Awesome** – Social media icons
+- **Google Maps Embed** – Display café location
+- **Local Storage / Context API** – State management
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[Kabul Coffee Shop Live](https://Aymaq-code.github.io/kabul-coffee)

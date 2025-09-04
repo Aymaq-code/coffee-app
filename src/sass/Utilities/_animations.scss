@@ -1,0 +1,73 @@
+@keyframes fade-right {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-left {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-down {
+  to {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+
+@keyframes waverRight {
+  to {
+    transform: translateX(30px) translateY(30px);
+  }
+}
+@keyframes waverLeft {
+  to {
+    transform: translateX(-30px) translateY(-30px);
+  }
+}
+@keyframes waverDown {
+  to {
+    transform: translateY(30px);
+  }
+}
+@keyframes waverUp {
+  to {
+    transform: translateY(-560px);
+  }
+}
+@keyframes waverRouter {
+  to {
+    transform: rotate(0);
+  }
+}
+@keyframes zoomOut {
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

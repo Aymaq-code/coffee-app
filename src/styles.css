@@ -1,0 +1,46 @@
+.home {
+  min-height: 100vh;
+}
+.home__content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+.home__right {
+  aspect-ratio: 13/10;
+  width: 80%;
+  justify-self: right;
+  align-self: center;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: fade-left 1s ease 2s backwards;
+}
+.home__left {
+  overflow: hidden;
+  padding: 2rem;
+}
+.home__left--button {
+  animation: fade-up 1s ease 1.5s backwards;
+}
+.home__title {
+  line-height: 7rem;
+  font-size: 5rem;
+  letter-spacing: 11px;
+  text-transform: uppercase;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  animation: fade-right 1.5s ease;
+}
+.home__title-highlight {
+  text-transform: capitalize;
+  line-height: 2rem;
+  letter-spacing: 7px;
+  font-size: 2.5rem;
+  opacity: 60%;
+}
+.home__description {
+  margin-bottom: 5rem;
+  animation: fade-right 1s ease 1s backwards;
+}
+
+/*# sourceMappingURL=styles.css.map */

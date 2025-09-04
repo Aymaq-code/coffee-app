@@ -1,0 +1,79 @@
+// COLORS
+// Primary colors
+$coffee-primary: #8c5c3d;
+$coffee-primary-light: #b58751;
+$coffee-primary-dark: #3e1b0a;
+
+// Neutral colors
+$coffee-neutral-light: #d9eae3;
+$coffee-neutral-medium: #bfb1ab;
+$coffee-neutral-dark: #271f1f;
+
+// Accent colors
+$coffee-accent-blue: rgb(190, 199, 211);
+$coffee-accent-cream: #f1ebe7;
+$coffee-accent-warm: #eecfb4;
+
+// Background colors
+$coffee-bg-dark: #3b2f2f;
+$coffee-bg-darker: #2f3027;
+
+// Semantic colors
+$coffee-success: #4caf50;
+$coffee-warning: #ff9800;
+$coffee-error: #f44336;
+$coffee-info: #2196f3;
+
+// Text colors with better contrast
+$coffee-text-primary: #2d2d2d;
+$coffee-text-secondary: #555555;
+$coffee-text-light: #ffffff;
+$coffee-text-dark: #000000;
+
+// SHADOW
+$shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+$shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+  0 2px 4px -1px rgba(0, 0, 0, 0.06);
+$shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+  0 4px 6px -2px rgba(0, 0, 0, 0.05);
+$shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+  0 10px 10px -5px rgba(0, 0, 0, 0.04);
+$shadow-coffee: 0px 2px 10px 0px rgba(39, 31, 31, 0.3);
+
+// Gradients
+$gradient-coffee: linear-gradient(
+  200deg,
+  $coffee-bg-darker 5%,
+  $coffee-accent-warm 100%,
+  $coffee-bg-darker 100%
+);
+$gradient-cream: linear-gradient(
+  135deg,
+  $coffee-accent-cream 0%,
+  $coffee-neutral-medium 100%
+);
+$gradient-dark: linear-gradient(
+  135deg,
+  $coffee-bg-dark 0%,
+  $coffee-bg-darker 100%
+);
+
+// Border
+$border-radius-sm: 0.25rem;
+$border-radius-md: 0.5rem;
+$border-radius-lg: 0.75rem;
+$border-radius-xl: 1rem;
+
+// Spacing
+$spacing-xs: 0.25rem;
+$spacing-sm: 0.5rem;
+$spacing-md: 1rem;
+$spacing-lg: 1.3rem;
+$spacing-xl: 2rem;
+$spacing-2xl: 3rem;
+
+// Typography
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
