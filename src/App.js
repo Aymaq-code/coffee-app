@@ -1,5 +1,5 @@
 import {
-  BrowserRouter,
+  HashRouter,
   Navigate,
   Route,
   Routes,
@@ -39,7 +39,7 @@ function App() {
       <CoffeeProvider>
         <CartProvider>
           <ScrollAnimationProvider>
-            <BrowserRouter basename="/coffee-app">
+            <HashRouter>
               <ScrollToTop />
               <Routes>
                 <Route index element={<Home />} />
@@ -56,12 +56,11 @@ function App() {
                 <Route path="/payment" element={<PaymentPage />} />
                 <Route path="*" element={<ErrorPage />} />
               </Routes>
-            </BrowserRouter>
+            </HashRouter>
           </ScrollAnimationProvider>
         </CartProvider>
       </CoffeeProvider>
     </AuthProvider>
   );
 }
-
 export default App;
