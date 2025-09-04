@@ -47,4 +47,4 @@ The design emphasizes **responsive layouts**, professional typography, and visua
 - **Google Maps Embed** – Display café location
 - **Local Storage / Context API** – State management
 
-[Kabul Coffee Shop Live](https://Aymaq-code.github.io/kabul-coffee)
+[Kabul Coffee Shop Live](https://aymaq-code.github.io/coffee-app/)
