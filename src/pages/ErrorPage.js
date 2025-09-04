@@ -16,7 +16,7 @@ export default function ErrorPage() {
           We're fairly sure that page used to be here, but seems to have gone
           missing. We do apologise on its behalf.
         </p>
-        <Link to="/">
+        <Link to="/coffee-app/">
           <Button type={"primary"}>Home</Button>
         </Link>
       </div>
