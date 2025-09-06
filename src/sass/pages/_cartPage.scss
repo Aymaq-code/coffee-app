@@ -59,7 +59,7 @@
         gap: 0 10px;
 
         @media screen and (max-width: 900px) {
-          width: 100%;
+          width: 351px;
         }
 
         img {
@@ -69,7 +69,11 @@
           align-self: center;
           // width: 22%;
           @media screen and (max-width: 900px) {
-            height: 20rem;
+            height: 13rem;
+          }
+
+          @media screen and (max-width: 400px) {
+            height: 15rem;
           }
         }
 

@@ -9,7 +9,7 @@ export default function Contact() {
   return (
     <div className="contactPage">
       <Navigation />
-      <div className="container" ref={registerOnce}>
+      <div className="container">
         <div className="contactPage__contents">
           <div className="contactPage__contents-form">
             <div className="head">
@@ -28,9 +28,11 @@ export default function Contact() {
 
             <Button type="secondary">Send A Message</Button>
           </div>
-          <div className="contactPage__contents-map">
+          <div className="contactPage__contents-map" ref={registerOnce}>
             <iframe
+              className="iframe"
               src="https://maps.google.com/maps?q=34.5328622,69.1653065&z=15&output=embed"
+              title="location"
               width="100%"
               height="751"
               allowFullScreen

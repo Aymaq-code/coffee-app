@@ -1,14 +1,20 @@
 .container {
-  //border: 1px solid red;
-  margin: 10rem auto !important;
+  //border: 1px solid blue;
+  margin: 10rem auto;
   max-width: 1300px;
   position: relative;
-  //  z-index: -1;
+  //z-index: -1;
 }
 
 @include respond(big-desktop) {
   .container {
     //border: 5px solid yellow;
     max-width: 1500px;
+  }
+}
+
+@include respond(tab-port) {
+  .container {
+    margin: 0rem auto !important;
   }
 }

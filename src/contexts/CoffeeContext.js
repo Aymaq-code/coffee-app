@@ -1,6 +1,10 @@
 import { createContext, useContext, useEffect, useReducer } from "react";
 
-const BASE_URL = "http://localhost:4000";
+const BASE_URL =
+  process.env.NODE_ENV === "development"
+    ? "http://localhost:4000"
+    : process.env.PUBLIC_URL + "/data";
+
 const CoffeeContext = createContext();
 
 const initialState = {
@@ -60,32 +64,51 @@ function CoffeeProvider({ children }) {
       dispatch({ type: "loading" });
 
       try {
-        const [menusRes, blogRes, categoriesRes, teamRes] = await Promise.all([
-          fetch(`${BASE_URL}/menus`),
-          fetch(`${BASE_URL}/blog`),
-          fetch(`${BASE_URL}/categories`),
-          fetch(`${BASE_URL}/teams`),
-        ]);
+        if (process.env.NODE_ENV === "development") {
+          const [menusRes, blogRes, categoriesRes, teamRes] = await Promise.all(
+            [
+              fetch(`${BASE_URL}/menus`),
+              fetch(`${BASE_URL}/blog`),
+              fetch(`${BASE_URL}/categories`),
+              fetch(`${BASE_URL}/teams`),
+            ]
+          );
 
-        if (!menusRes.ok || !blogRes.ok || !categoriesRes.ok || !teamRes.ok) {
-          throw new Error("Failed to fetch data");
+          if (!menusRes.ok || !blogRes.ok || !categoriesRes.ok || !teamRes.ok) {
+            throw new Error("Failed to fetch data");
+          }
+
+          const [menus, blog, categories, team] = await Promise.all([
+            menusRes.json(),
+            blogRes.json(),
+            categoriesRes.json(),
+            teamRes.json(),
+          ]);
+
+          dispatch({ type: "coffMenu/loaded", payload: menus });
+          dispatch({ type: "blog/loaded", payload: blog });
+          dispatch({ type: "categories/loaded", payload: categories });
+          dispatch({ type: "teams/loaded", payload: team });
+        } else {
+          const response = await fetch(`${BASE_URL}/data.json`);
+          if (!response.ok) {
+            throw new Error("Failed to fetch data");
+          }
+
+          const data = await response.json();
+
+          dispatch({ type: "coffMenu/loaded", payload: data.menus || [] });
+          dispatch({ type: "blog/loaded", payload: data.blog || [] });
+          dispatch({
+            type: "categories/loaded",
+            payload: data.categories || [],
+          });
+          dispatch({ type: "teams/loaded", payload: data.teams || [] });
         }
-
-        const [menus, blog, categories, team] = await Promise.all([
-          menusRes.json(),
-          blogRes.json(),
-          categoriesRes.json(),
-          teamRes.json(),
-        ]);
-
-        dispatch({ type: "coffMenu/loaded", payload: menus });
-        dispatch({ type: "blog/loaded", payload: blog });
-        dispatch({ type: "categories/loaded", payload: categories });
-        dispatch({ type: "teams/loaded", payload: team });
-      } catch {
+      } catch (error) {
         dispatch({
           type: "rejected",
-          payload: "There was an error loading the data",
+          payload: error.message || "There was an error loading the data",
         });
       }
     }

@@ -2,6 +2,7 @@
   background-image: $gradient-coffee;
   min-height: 100vh;
   background-color: gray;
+
   &__content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));

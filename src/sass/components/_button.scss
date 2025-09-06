@@ -62,7 +62,7 @@
 }
 
 .secondary {
-  background: $coffee-bg-darker;
+  background: $coffee-primary;
   color: $coffee-text-light;
   font-weight: $font-weight-bold;
   font-size: 1.6rem;
@@ -71,7 +71,7 @@
   box-shadow: $shadow-coffee;
 
   &:hover:not(:disabled) {
-    background: $coffee-primary;
+    background: $coffee-primary-light;
     color: $coffee-text-light;
     transform: translateY(-2px);
     box-shadow: $shadow-md;

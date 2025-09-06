@@ -2,8 +2,18 @@
   background-image: linear-gradient(
     180deg,
     $coffee-bg-dark 5%,
-    $coffee-neutral-medium 100%,
-    $coffee-neutral-medium 100%,
+    $coffee-neutral-medium 30%,
+    $coffee-neutral-medium 50%,
     $coffee-accent-blue 100%
   );
+
+  @media screen and (max-width: 400px) {
+    background-image: linear-gradient(
+      180deg,
+      $coffee-bg-dark 0%,
+      $coffee-neutral-medium 20%,
+      $coffee-neutral-medium 60%,
+      $coffee-accent-blue 100%
+    );
+  }
 }

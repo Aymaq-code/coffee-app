@@ -10,6 +10,7 @@ Welcome to **Kabul Coffee**, a modern coffee shop website built with **React**. 
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Project Structure](#project-structure)
+- [Project Screenshots](#project-screenshots)
 
 ---
 
@@ -47,4 +48,49 @@ The design emphasizes **responsive layouts**, professional typography, and visua
 - **Google Maps Embed** – Display café location
 - **Local Storage / Context API** – State management
 
-[Kabul Coffee Shop Live](https://Aymaq-code.github.io/kabul-coffee)
+---
+
+## Project Screenshots
+
+### 🏠 Homepage
+
+![Homepage](./public/screenshot/homePage.png)
+
+### 📖 Menu Page
+
+![Menu Page](./public/screenshot/menuList.png)
+
+### 📅 Reservation Page
+
+![Reservation Page](./public/screenshot/reservePage.png)
+
+### 👥 About Page
+
+![About Page](./public/screenshot/aboutPage.png)
+
+### 📰 Blog Page
+
+![Blog Page 1](./public/screenshot/blogPage_1.png)  
+![Blog Page 2](./public/screenshot/blogPage_2.png)
+
+### 📞 Contact Page
+
+![Contact Page](./public/screenshot/contactPage.png)
+
+### 🛒 Cart Page
+
+![Cart Page](./public/screenshot/cartPage.png)
+
+### 💳 Payment Page
+
+![Payment Page](./public/screenshot/paymentPage.png)
+
+### 🔑 Login Page
+
+![Login Page](./public/screenshot/logInPage.png)
+
+---
+
+## 🚀 Live Demo
+
+[Kabul Coffee Shop Live](https://aymaq-code.github.io/coffee-app/)

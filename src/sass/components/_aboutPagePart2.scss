@@ -178,3 +178,19 @@
     }
   }
 }
+@include respond(smallPhone) {
+  .aboutPagePart2 {
+    &__contents {
+      &-right {
+        &--wrapper1 {
+          width: 75%;
+          height: 60%;
+        }
+        &--wrapper2 {
+          width: 65%;
+          height: 40%;
+        }
+      }
+    }
+  }
+}
