@@ -22,7 +22,7 @@ function App() {
       <CoffeeProvider>
         <CartProvider>
           <ScrollAnimationProvider>
-            <BrowserRouter>
+            <BrowserRouter basename="/">
               <Routes>
                 <Route index element={<Home />} />
                 <Route path="/menu" element={<Menu />} />
