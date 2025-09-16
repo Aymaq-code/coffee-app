@@ -1,6 +1,5 @@
 import { createContext, useContext, useEffect, useReducer } from "react";
 
-const BASE_URL = "http://localhost:4000";
 const CoffeeContext = createContext();
 
 const initialState = {
@@ -8,6 +7,7 @@ const initialState = {
   isMenuOpen: false,
   readMore: false,
   error: "",
+  menus: [],
   coffMenu: [],
   blog: [],
   categories: [],
@@ -27,6 +27,16 @@ function reducer(state, action) {
 
     case "TOGGLE_READ_MORE":
       return { ...state, readMore: !state.readMore };
+
+    case "data/loaded":
+      return {
+        ...state,
+        loading: false,
+        menus: action.payload.menus || [],
+        blog: action.payload.blog || [],
+        categories: action.payload.categories || [],
+        teams: action.payload.teams || [],
+      };
 
     case "coffMenu/loaded":
       return { ...state, loading: false, coffMenu: action.payload };
@@ -58,30 +68,12 @@ function CoffeeProvider({ children }) {
   useEffect(() => {
     async function fetchData() {
       dispatch({ type: "loading" });
-
       try {
-        const [menusRes, blogRes, categoriesRes, teamRes] = await Promise.all([
-          fetch(`${BASE_URL}/menus`),
-          fetch(`${BASE_URL}/blog`),
-          fetch(`${BASE_URL}/categories`),
-          fetch(`${BASE_URL}/teams`),
-        ]);
+        const res = await fetch("https://renderr-sv80.onrender.com/db.json");
+        const data = await res.json();
 
-        if (!menusRes.ok || !blogRes.ok || !categoriesRes.ok || !teamRes.ok) {
-          throw new Error("Failed to fetch data");
-        }
-
-        const [menus, blog, categories, team] = await Promise.all([
-          menusRes.json(),
-          blogRes.json(),
-          categoriesRes.json(),
-          teamRes.json(),
-        ]);
-
-        dispatch({ type: "coffMenu/loaded", payload: menus });
-        dispatch({ type: "blog/loaded", payload: blog });
-        dispatch({ type: "categories/loaded", payload: categories });
-        dispatch({ type: "teams/loaded", payload: team });
+        // از این action type استفاده کنید
+        dispatch({ type: "data/loaded", payload: data });
       } catch {
         dispatch({
           type: "rejected",
@@ -106,7 +98,8 @@ function CoffeeProvider({ children }) {
       value={{
         isMenuOpen: state.isMenuOpen,
         readMore: state.readMore,
-        coffMenu: state.coffMenu,
+        menus: state.menus, // این اصلی است
+        coffMenu: state.menus, // اگر لازم است duplicate کنید
         blog: state.blog,
         categories: state.categories,
         teams: state.teams,
@@ -122,7 +115,7 @@ function CoffeeProvider({ children }) {
   );
 }
 
-function useNav() {
+function useCoffee() {
   const context = useContext(CoffeeContext);
 
   if (context === undefined)
@@ -131,4 +124,4 @@ function useNav() {
   return context;
 }
 
-export { CoffeeProvider, useNav };
+export { CoffeeProvider, useCoffee };

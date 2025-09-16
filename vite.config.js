@@ -1,7 +1,12 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
+// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: process.env.NODE_ENV === "production" ? "/coffee-app/" : "/",
+  preview: {
+    port: 10000,
+    host: "0.0.0.0",
+    allowedHosts: ["renderr-sv80.onrender.com"],
+  },
 });

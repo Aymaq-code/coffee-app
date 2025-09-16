@@ -3,11 +3,14 @@ import EmptyMsg from "../errors/EmptyMsg";
 import Button from "./Button";
 import { useCart } from "../contexts/CartContext";
 import { useAuth } from "../contexts/FakeAuthContext";
+import { useCoffee } from "../contexts/CoffeeContext";
 
 export default function MenuList({ coffMenu }) {
   const navigate = useNavigate();
   const { addToCart } = useCart();
   const { isAuthenticated } = useAuth();
+
+  const { menus } = useCoffee();
 
   if (coffMenu.length === 0)
     return <EmptyMsg message="No coffee items available" />;
@@ -26,7 +29,7 @@ export default function MenuList({ coffMenu }) {
 
   return (
     <section className="menu_coffeeLists" aria-label="Coffee menu items">
-      {coffMenu.map((coff) => (
+      {menus.map((coff) => (
         <article className="menu_coffeeLists-card" key={coff.id}>
           <h2 className="coffeeName">{coff.coffeeName}</h2>
           <h3 className="original">{coff.origin}</h3>

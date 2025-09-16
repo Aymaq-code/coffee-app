@@ -3,11 +3,11 @@ import MenuHead from "../components/MenuHead";
 import MenuList from "../components/MenuList";
 import Navigation from "../components/Navigation";
 import Snipper from "../components/Snipper";
-import { useNav } from "../contexts/CoffeeContext";
+import { useCoffee } from "../contexts/CoffeeContext";
 import ErrorPage from "./ErrorPage";
 
 export default function Menu() {
-  const { coffMenu, loading, error } = useNav();
+  const { coffMenu, loading, error } = useCoffee();
 
   if (loading) return <Snipper />;
   if (error) return <ErrorPage message={error} />;

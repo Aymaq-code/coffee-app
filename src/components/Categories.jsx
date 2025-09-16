@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import { useNav } from "../contexts/CoffeeContext";
+import { useCoffee } from "../contexts/CoffeeContext";
 
 export default function Categories() {
-  const { categories } = useNav();
+  const { categories } = useCoffee();
 
   return (
     <div className="categories">

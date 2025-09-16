@@ -1,13 +1,13 @@
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import Button from "./Button";
 import Logo from "./logo";
-import { useNav } from "../contexts/CoffeeContext";
+import { useCoffee } from "../contexts/CoffeeContext";
 import MenuMegaMenu from "./MenuMegaMenu";
 import { useAuth } from "../contexts/FakeAuthContext";
 import { useEffect, useRef } from "react";
 
 export default function Navigation() {
-  const { isMenuOpen, toggleMenu, closeMenu } = useNav();
+  const { isMenuOpen, toggleMenu, closeMenu } = useCoffee();
   const { user, isAuthenticated, logout } = useAuth();
   const navigate = useNavigate();
   const menuRef = useRef(null);

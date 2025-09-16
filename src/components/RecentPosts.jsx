@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import { useNav } from "../contexts/CoffeeContext";
+import { useCoffee } from "../contexts/CoffeeContext";
 
 export default function RecentPosts() {
-  const { blog } = useNav();
+  const { blog } = useCoffee();
   return (
     <div className="recentPosts">
       <h2>Recent Posts</h2>

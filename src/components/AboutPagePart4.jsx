@@ -1,10 +1,10 @@
 import Snipper from "./Snipper";
-import { useNav } from "../contexts/CoffeeContext";
+import { useCoffee } from "../contexts/CoffeeContext";
 import { useAnimation } from "../contexts/ScrollAnimationContext";
 import EmptyMsg from "../errors/EmptyMsg";
 
 export default function AboutPagePart4() {
-  const { teams, loading } = useNav();
+  const { teams, loading } = useCoffee();
   const { registerOnce } = useAnimation();
 
   if (loading) return <Snipper />;

@@ -1,10 +1,4 @@
-import {
-  BrowserRouter,
-  Navigate,
-  Route,
-  Routes,
-  useLocation,
-} from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { CoffeeProvider } from "./contexts/CoffeeContext";
 import { CartProvider } from "./contexts/CartContext";
 import { ScrollAnimationProvider } from "./contexts/ScrollAnimationContext";
@@ -21,17 +15,6 @@ import ErrorPage from "./pages/ErrorPage";
 import AuthProvider from "./contexts/FakeAuthContext";
 import CartPage from "./pages/CartPage";
 import PaymentPage from "./pages/PaymentPage";
-import { useEffect } from "react";
-
-function ScrollToTop() {
-  const { pathname } = useLocation();
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
-
-  return null;
-}
 
 function App() {
   return (
@@ -40,7 +23,6 @@ function App() {
         <CartProvider>
           <ScrollAnimationProvider>
             <BrowserRouter>
-              <ScrollToTop />
               <Routes>
                 <Route index element={<Home />} />
                 <Route path="/menu" element={<Menu />} />

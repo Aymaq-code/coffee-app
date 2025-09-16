@@ -10,11 +10,6 @@ Welcome to **Kabul Coffee**, a modern coffee shop website built with **React** a
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Project Structure](#project-structure)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Screenshots](#screenshots)
-- [Contributing](#contributing)
-- [License](#license)
 
 ---
 
