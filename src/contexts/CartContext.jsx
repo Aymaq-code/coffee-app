@@ -18,13 +18,12 @@ export function CartProvider({ children }) {
   }
 
   function removeFromCart(id) {
-    setCart(
-      (prev) =>
-        prev
-          .map((item) =>
-            item.id === id ? { ...item, quantity: item.quantity - 1 } : item
-          )
-          .filter((item) => item.quantity > 0) // remove if qty becomes 0
+    setCart((prev) =>
+      prev
+        .map((item) =>
+          item.id === id ? { ...item, quantity: item.quantity - 1 } : item
+        )
+        .filter((item) => item.quantity > 0)
     );
   }
 
